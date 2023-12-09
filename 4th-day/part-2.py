@@ -39,7 +39,3 @@ for v in instances:
 print(instances)
 print(total)
 
-
-# https://adventofcode.com/2023/leaderboard/private/view/2306561
-
-2774465761
