@@ -48,6 +48,8 @@ while not found:
 distances = sorted(greater, reverse=True)
 print(distances)
 
+
+# This part definitely feels like a cheat - but it takes way to long to work if I dont use it
 lcm = math.lcm(distances[0], distances[1], distances[2], distances[3], distances[4], distances[5])    
 
 
