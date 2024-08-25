@@ -21,9 +21,8 @@ class bTree:
                 self.right = bTree(data)
         
     def inOrder(self, b): 
-        self.inOrder(b.left)
-        print(b.data)
-        self.inOrder(b.right)
+        # Need to implement this
+        self
         
 
 b = bTree(16)
