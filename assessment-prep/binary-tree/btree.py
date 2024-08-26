@@ -30,7 +30,10 @@ b.insert(15)
 b.insert(4)
 b.insert(17)
 b.insert(3)
-b.insert(20)
+b.insert(43)
+b.insert(67)
+b.insert(1)
+b.insert(19)
 
 b.inOrder(b)
         
