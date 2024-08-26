@@ -1,39 +1,35 @@
-class bTree:
-    def __init__ (self, data):
+class Node:
+    def __init__(self, data):
         self.data = data
         self.left = None
         self.right = None
         
-    def insert(self, data):        
-        if self.data == data:
-            return
+def insert(root, data):
+    if root is None:
+        return Node(data)
+    
+    if data < root.data:
+        root.left = insert(root.left, data)
+    else:
+        root.right = insert(root.right, data)
         
-        if data < self.data:
-            if self.left:
-                self.left.insert(data)
-            else:
-                self.left = bTree(data)
-        
-        else:
-            if self.right:
-                self.right.insert(data)
-            else:
-                self.right = bTree(data)
-        
-    def inOrder(self, b): 
-        # Need to implement this
-        self
-        
+    return root
 
-b = bTree(16)
-b.insert(15)
-b.insert(4)
-b.insert(17)
-b.insert(3)
-b.insert(43)
-b.insert(67)
-b.insert(1)
-b.insert(19)
-
-b.inOrder(b)
+def inorder(root):
+    if root:
+        inorder(root.left)
+        print(root.data, end=' ')
+        inorder(root.right)
         
+if __name__ == "__main__":
+    
+    root = Node(50)
+    root = insert(root, 30)
+    root = insert(root, 20)
+    root = insert(root, 40)
+    root = insert(root, 70)
+    root = insert(root, 60)
+    root = insert(root, 80)
+    
+    print("InOrder")
+    inorder(root)
