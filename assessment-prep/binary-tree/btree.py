@@ -21,6 +21,12 @@ def inorder(root):
         print(root.data, end=' ')
         inorder(root.right)
         
+def preorder(root):
+    if root:
+        preorder(root.left)
+        preorder(root.right)
+        print(root.data, end=' ')
+        
 if __name__ == "__main__":
     
     root = Node(50)
@@ -33,3 +39,5 @@ if __name__ == "__main__":
     
     print("InOrder")
     inorder(root)
+    print("")
+    preorder(root)
