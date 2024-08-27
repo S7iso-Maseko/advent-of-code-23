@@ -23,8 +23,15 @@ def inorder(root):
         
 def preorder(root):
     if root:
+        print(root.data, end=' ')
         preorder(root.left)
         preorder(root.right)
+        
+        
+def postorder(root):
+    if root:
+        postorder(root.left)
+        postorder(root.right)
         print(root.data, end=' ')
         
 if __name__ == "__main__":
@@ -39,5 +46,7 @@ if __name__ == "__main__":
     
     print("InOrder")
     inorder(root)
+    print("")
+    preorder(root)
     print("")
     preorder(root)
