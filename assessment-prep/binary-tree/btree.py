@@ -52,3 +52,5 @@ if __name__ == "__main__":
     preorder(root)
     preorder(root)
     preorder(root)
+    
+    
