@@ -60,6 +60,7 @@ if __name__ == "__main__":
         ("Paris", "New York"),
         ("Dubai", "New York"),
         ("New York", "Toronto"),
+        ("New York", "Melrose"),
     ]
     
     route_graph = Graph(routes)
